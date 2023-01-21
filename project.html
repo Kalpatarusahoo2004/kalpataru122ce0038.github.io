@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heading</title>
+<style>
+    
+    .navbar ul{
+        overflow: auto;
+        background-color: black;
+        color: aliceblue;
+        border-radius: 15px;
+
+    }
+    .navbar li{
+        float: left;
+        list-style: none;
+        padding: 5px;
+        margin: 3px;
+    }
+    .container{
+        border: 3px solid blueviolet;
+        background-color: greenyellow;
+        padding: 34px auto;
+        margin: 34px;
+    }
+</style>
+<script>
+    let b;
+    let date;
+    let time;
+    setInterval(() => {
+        b= new Date();
+        date = b.toLocaleDateString();
+        time = b.getHours() + "/" + b.getMinutes() + "/" + b.getSeconds();
+        document.getElementById('time').innerHTML = time + "<br>" + date;
+    },1000);
+    </script>
+    
+
+<script type="text/javascript">
+    function fun(){
+      prompt ("This is a prompt box","welcome");  
+    }
+</script>
+
+        
+        
+        
+        
+</head>
+<body>
+    <h1 id="heading">
+        What is web devlopement ?
+    </h1>
+
+    <header>
+    <nav class="navbar">
+        <ul>
+            
+            <li>:Kalpataru Sahoo</li>
+            <li>:Roll-122CE0038</li>
+            <li>:Civil Department</li>
+        </ul>
+    </nav>
+  </header>
+  <div class="container">
+   
+    <p>
+        <strong>Web development</strong> is the method of building websites and applications for the internet or a personal network known as an intranet. Web development is not inquisitive about the design of a website; fairly, it’s all about the coding and programming that powers the website’s functionality.
+
+
+    </p>
+    <p>
+        From the easiest, static web pages to social media outlets and apps, from e-commerce websites to content management methods (CMS)—all the tools we use through the internet on an everyday basis have been built by developers.
+    </p>
+    
+
+    
+    
+</div>
+  
+    <p>click the following button to see the effect</p>
+   <form >
+    <input type="button" value = "prompt" onclick ="fun();">
+   </form> 
+   <div class="contentBox">
+       <button onclick="changeBackground()">Change BG</button>
+       <button onclick="changeText()">Change heading</button>
+   </div>
+   
+   <div class="clk">
+    <h1 class="c1s1">Current time is: <span id="time"></span></h1>
+   </div>
+   <h1 id="idh"></h1>
+    <footer style="text-align: center;">
+    My first Web &copy; All Right Reserved
+    </footer>
+   <script>
+    function changeBackground(){
+        document.body.style.backgroundColor ='cyan';
+    }
+   </script>
+   
+   
+   
+    <script>
+        function changeText()
+{
+    setTimeout(() => {
+        document.getElementById('heading').innerText="Why to devlope web?";
+    }, 5000);
+}
+    </script>
+</body>
+</html>
